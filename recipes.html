@@ -4,7 +4,28 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Recipes - Tastes of Africa</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    /* Flexbox layout for dishes */
+    .dishes {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+    }
+    .dishes figure {
+      width: 200px;
+      text-align: center;
+      margin: 0;
+    }
+    .dishes img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      display: block;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -18,25 +39,61 @@
       </ul>
     </nav>
   </header>
-
   <main>
     <section>
       <h2>Featured African Dishes</h2>
       <p>Explore some of the most iconic and flavorful dishes from across Africa.</p>
-
-      <ul>
-        <li><a href="recipes/jollof-rice.html">Jollof Rice</a></li>
-        <li><a href="recipes/injera.html">Injera</a></li>
-        <li><a href="recipes/tagine.html">Tagine</a></li>
-        <li><a href="recipes/isombe.html">Isombe</a></li>
-        <li><a href="recipes/ubugari.html">Ubugari</a></li>
-        <li><a href="recipes/cassava-maize.html">Cassava and Maize</a></li>
-      </ul>
+      <div class="dishes">
+        <figure>
+          <img src="images/jollof rice.jpg" alt="Jollof Rice">
+          <figcaption>Jollof Rice</figcaption>
+        </figure>
+        <figure>
+          <img src="images/ugali.jpg" alt="Ugali">
+          <figcaption>Ugali</figcaption>
+        </figure>
+        <figure>
+          <img src="images/injera.jpg" alt="Injera">
+          <figcaption>Injera</figcaption>
+        </figure>
+        <figure>
+          <img src="images/egusi soup.jpg" alt="Egusi Soup">
+          <figcaption>Egusi Soup</figcaption>
+        </figure>
+        <figure>
+          <img src="images/isombe.jpg" alt="Isombe">
+          <figcaption>Isombe</figcaption>
+        </figure>
+        <figure>
+          <img src="images/Tagine.jpg" alt="Tagine">
+          <figcaption>Tagine</figcaption>
+        </figure>
+        <figure>
+          <img src="images/ubugari.jpg" alt="Ubugari">
+          <figcaption>Isombe and Ubugari</figcaption>
+        </figure>
+        <figure>
+          <img src="images/bobotie.jpg" alt="Bobotie">
+          <figcaption>Bobotie</figcaption>
+        </figure>
+        <figure>
+          <img src="images/bunny-chow.jpg" alt="Bunny Chow">
+          <figcaption>Bunny Chow</figcaption>
+        </figure>
+        <figure>
+          <img src="images/cassava.jpg" alt="Cassava and Beans">
+          <figcaption>Cassava and Beans</figcaption>
+        </figure>
+      </div>
     </section>
   </main>
-
-  <footer>
-    <p>&copy; 2025 Tastes of Africa</p>
+   <footer>
+    <p>&copy; 2025 Chantal's culinary art. All rights reserved.</p>
+    <form>
+      <label for="newsletter">Subscribe to our newsletter:</label>
+      <input type="email" id="newsletter" name="newsletter" placeholder="Enter your email" required />
+      <button type="submit">Subscribe</button>
+    </form>
   </footer>
 </body>
 </html>
