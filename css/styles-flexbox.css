@@ -1,3 +1,4 @@
+
 /* Global Styles */
 * {
   margin: 0;
@@ -15,7 +16,7 @@ body {
 
 /* Header */
 header {
-  background-color: #008b8b; /* African-inspired color */
+  background-color: #008b8b;
   color: white;
   padding: 1rem;
   text-align: center;
@@ -27,13 +28,16 @@ header h1 {
 }
 
 nav ul {
-  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
   padding: 0;
+  list-style: none;
 }
 
 nav ul li {
-  display: inline;
-  margin-right: 15px;
+  margin: 0;
 }
 
 nav ul li a {
@@ -85,7 +89,6 @@ section figure {
 }
 
 section img {
-   
   height: auto; 
   max-width: 900px;
   border-radius: 10px;
@@ -111,22 +114,20 @@ iframe {
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
-  gap: 20px;
   padding: 20px;
 }
+
 .dishes figure {
-  width:200px;
+  width: 200px;
   margin-bottom: 20px;
   text-align: center;
 }
 
 .dishes img {
-  max-width: 100%; /* Adjusted to fit the layout */
+  max-width: 100%;
   height: auto;
   border-radius: 10px;
   display: block;
-
-
 }
 
 .dishes figcaption {
@@ -153,7 +154,7 @@ form input, form select, form textarea, form button {
   padding: 10px;
   font-size: 1rem;
   margin-bottom: 15px;
-  border: 1px solid #ccc;
+  border: 1px solid #eae2e2;
   border-radius: 5px;
 }
 
@@ -168,11 +169,12 @@ form button {
   background-color: #242828;
   color: white;
   border: none;
+  width: 14rem;
   cursor: pointer;
 }
 
 form button:hover {
-  background-color: #004f4f;
+  background-color: #2810b1;
 }
 
 /* Focus States for Inputs */
@@ -189,23 +191,29 @@ footer {
   padding: 1rem;
 } 
 
- footer p {
+footer p {
   font-size: 1rem;
 }
 
 footer form {
-  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  gap: 10px;
+  max-width: 600px;
+  margin: 20px auto 0;
 }
 
-footer form input[type="email"] {
-  width: 80%;
-  display: inline-block;
-}
-
-footer form button {
-  width: 80%;
-  display: inline-block;
+footer form input[type="email"]
+ {
+  width: auto;
+  flex: 1;
 }   
+footer form button {
+  flex-shrink: 0; /* Keeps button size fixed */
+  padding: 10px 20px;
+}
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -229,19 +237,13 @@ footer form button {
 
   nav ul {
     text-align: center;
+    flex-direction: column;
   }
 
-  nav ul li {
-    display: inline-block;
-    margin-right: 10px;
-  }
-
-  footer form input[type="email"] {
-    width: 60%;
-  }
-
+  footer form input[type="email"],
   footer form button {
-    width: 35%;
+    width: 100%;
+    flex: 1 1 100%;
   }
 }
 
